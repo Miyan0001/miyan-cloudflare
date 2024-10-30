@@ -4,7 +4,7 @@ scraper = cloudscraper.create_scraper()
 
 app = Flask(__name__)
 
-@app.route('*', methods=['GET'])
+@app.route('/cloudflare', methods=['GET'])
 def cloudflare_route():
     url = request.args.get('url')
     if not url:
